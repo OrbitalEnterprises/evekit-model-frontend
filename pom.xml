@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>enterprises.orbital</groupId>
+    <artifactId>license</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>enterprises.orbital.evekit</groupId>
+  <artifactId>model-frontend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>EveKit Model API Frontend</name>
+  <description>Exposes the EveKit model web services</description>
+  
+  <properties>
+    <enterprises.orbital.evekit.model-frontend.appname>evekit-model</enterprises.orbital.evekit.model-frontend.appname>
+    <enterprises.orbital.evekit.model-frontend.db.properties.driver>com.mysql.jdbc.Driver</enterprises.orbital.evekit.model-frontend.db.properties.driver>
+    <enterprises.orbital.evekit.model-frontend.db.properties.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.properties.dialect>
+    <enterprises.orbital.evekit.model-frontend.db.account.driver>com.mysql.jdbc.Driver</enterprises.orbital.evekit.model-frontend.db.account.driver>
+    <enterprises.orbital.evekit.model-frontend.db.account.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.account.dialect>
+  </properties>
+  
+  <build>
+    <finalName>evekit-${project.artifactId}-${project.version}</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <!-- Make sure we sub in our web configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <filtering>true</filtering>
+              <directory>src/main/webapp</directory>
+              <includes>
+                <include>**/web.xml</include>
+              </includes>
+            </resource>
+          </webResources>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>
+          <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+        </configuration>
+      </plugin>
+      <!-- This allows you to deploy to a Tomcat server -->
+      <!-- Use a profile to create appropriate settings (see README.md) -->  
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <url>${enterprises.orbital.evekit.model-frontend.tomcat.url}</url>
+          <server>${enterprises.orbital.evekit.model-frontend.tomcat.server}</server>
+          <path>${enterprises.orbital.evekit.model-frontend.tomcat.path}</path>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>enterprises.orbital.evekit</groupId>
+      <artifactId>model-ws</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>    
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <version>1.5.7</version>
+    </dependency> 
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-jersey2-jaxrs</artifactId>
+      <version>1.5.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.38</version>
+    </dependency>
+    <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>5.0.6.Final</version>
+		</dependency>    
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>    
+  </dependencies>
+    
+</project>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+
+    <persistence-unit name="evekit-properties">
+        <description>
+            EveKit Configuration Properties
+        </description>
+        
+        <class>enterprises.orbital.db.DBProperty</class>
+        <class>enterprises.orbital.evekit.account.GeneralSequenceNumber</class>
+        <class>enterprises.orbital.evekit.account.EveKitUserAccount</class>
+        <class>enterprises.orbital.evekit.account.EveKitUserAuthSource</class>
+        <class>enterprises.orbital.evekit.account.SynchronizedAccountAccessKey</class>
+        <class>enterprises.orbital.evekit.account.SynchronizedEveAccount</class>
+        <class>enterprises.orbital.evekit.model.CapsuleerSyncTracker</class>
+        <class>enterprises.orbital.evekit.model.CorporationSyncTracker</class>
+        <class>enterprises.orbital.evekit.model.SyncTracker</class>        
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="${enterprises.orbital.evekit.model-frontend.db.properties.driver}"/>
+            <property name="javax.persistence.jdbc.url" value="${enterprises.orbital.evekit.model-frontend.db.properties.url}"/>
+            <property name="javax.persistence.jdbc.user" value="${enterprises.orbital.evekit.model-frontend.db.properties.user}"/>
+            <property name="javax.persistence.jdbc.password" value="${enterprises.orbital.evekit.model-frontend.db.properties.password}"/>
+            <property name="hibernate.dialect" value="${enterprises.orbital.evekit.model-frontend.db.properties.dialect}"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+            
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="300"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="10000"/>
+        </properties>
+
+    </persistence-unit>
+
+    <persistence-unit name="evekit-account">
+        <description>
+            EveKit Account and Model
+        </description>
+        
+        <class>enterprises.orbital.db.DBProperty</class>
+        <class>enterprises.orbital.evekit.account.GeneralSequenceNumber</class>
+        <class>enterprises.orbital.evekit.account.EveKitUserAccount</class>
+        <class>enterprises.orbital.evekit.account.EveKitUserAuthSource</class>
+        <class>enterprises.orbital.evekit.account.SynchronizedAccountAccessKey</class>
+        <class>enterprises.orbital.evekit.account.SynchronizedEveAccount</class>
+        <class>enterprises.orbital.evekit.model.CapsuleerSyncTracker</class>
+        <class>enterprises.orbital.evekit.model.CorporationSyncTracker</class>
+        <class>enterprises.orbital.evekit.model.SyncTracker</class>
+
+        <class>enterprises.orbital.evekit.model.CachedData</class>
+        <class>enterprises.orbital.evekit.model.common.AccountBalance</class>        
+        <class>enterprises.orbital.evekit.model.common.AccountStatus</class>        
+        <class>enterprises.orbital.evekit.model.common.Asset</class>
+        <class>enterprises.orbital.evekit.model.common.Blueprint</class>
+        <class>enterprises.orbital.evekit.model.common.Bookmark</class>
+        <class>enterprises.orbital.evekit.model.common.Contact</class>
+        <class>enterprises.orbital.evekit.model.common.ContactLabel</class>
+        <class>enterprises.orbital.evekit.model.common.Contract</class>
+        <class>enterprises.orbital.evekit.model.common.ContractBid</class>
+        <class>enterprises.orbital.evekit.model.common.ContractItem</class>
+        <class>enterprises.orbital.evekit.model.common.FacWarStats</class>
+        <class>enterprises.orbital.evekit.model.common.IndustryJob</class>
+        <class>enterprises.orbital.evekit.model.common.Kill</class>
+        <class>enterprises.orbital.evekit.model.common.KillAttacker</class>
+        <class>enterprises.orbital.evekit.model.common.KillItem</class>
+        <class>enterprises.orbital.evekit.model.common.KillVictim</class>
+        <class>enterprises.orbital.evekit.model.common.MarketOrder</class>
+        <class>enterprises.orbital.evekit.model.common.Standing</class>
+        <class>enterprises.orbital.evekit.model.common.WalletJournal</class>
+        <class>enterprises.orbital.evekit.model.common.WalletTransaction</class>
+        <class>enterprises.orbital.evekit.model.character.CalendarEventAttendee</class>
+        <class>enterprises.orbital.evekit.model.character.Capsuleer</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterContactNotification</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterMailMessage</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterMailMessageBody</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterMedal</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterNotification</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterNotificationBody</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterRole</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheet</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheetBalance</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheetClone</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheetJump</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSkill</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSkillInTraining</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterTitle</class>
+        <class>enterprises.orbital.evekit.model.character.ChatChannel</class>
+        <class>enterprises.orbital.evekit.model.character.ChatChannelMember</class>
+        <class>enterprises.orbital.evekit.model.character.Implant</class>
+        <class>enterprises.orbital.evekit.model.character.JumpClone</class>
+        <class>enterprises.orbital.evekit.model.character.JumpCloneImplant</class>
+        <class>enterprises.orbital.evekit.model.character.MailingList</class>
+        <class>enterprises.orbital.evekit.model.character.PlanetaryColony</class>
+        <class>enterprises.orbital.evekit.model.character.PlanetaryLink</class>
+        <class>enterprises.orbital.evekit.model.character.PlanetaryPin</class>
+        <class>enterprises.orbital.evekit.model.character.PlanetaryRoute</class>
+        <class>enterprises.orbital.evekit.model.character.ResearchAgent</class>
+        <class>enterprises.orbital.evekit.model.character.SkillInQueue</class>
+        <class>enterprises.orbital.evekit.model.character.UpcomingCalendarEvent</class>
+        <class>enterprises.orbital.evekit.model.corporation.ContainerLog</class>
+        <class>enterprises.orbital.evekit.model.corporation.Corporation</class>
+        <class>enterprises.orbital.evekit.model.corporation.CorporationMedal</class>
+        <class>enterprises.orbital.evekit.model.corporation.CorporationMemberMedal</class>
+        <class>enterprises.orbital.evekit.model.corporation.CorporationSheet</class>
+        <class>enterprises.orbital.evekit.model.corporation.CorporationTitle</class>
+        <class>enterprises.orbital.evekit.model.corporation.CustomsOffice</class>
+        <class>enterprises.orbital.evekit.model.corporation.Division</class>
+        <class>enterprises.orbital.evekit.model.corporation.Facility</class>
+        <class>enterprises.orbital.evekit.model.corporation.Fuel</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberSecurity</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberSecurityLog</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberTracking</class>
+        <class>enterprises.orbital.evekit.model.corporation.Outpost</class>
+        <class>enterprises.orbital.evekit.model.corporation.OutpostServiceDetail</class>
+        <class>enterprises.orbital.evekit.model.corporation.Role</class>
+        <class>enterprises.orbital.evekit.model.corporation.SecurityRole</class>
+        <class>enterprises.orbital.evekit.model.corporation.SecurityTitle</class>
+        <class>enterprises.orbital.evekit.model.corporation.Shareholder</class>
+        <class>enterprises.orbital.evekit.model.corporation.Starbase</class>
+        <class>enterprises.orbital.evekit.model.corporation.StarbaseDetail</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="${enterprises.orbital.evekit.model-frontend.db.account.driver}"/>
+            <property name="javax.persistence.jdbc.url" value="${enterprises.orbital.evekit.model-frontend.db.account.url}"/>
+            <property name="javax.persistence.jdbc.user" value="${enterprises.orbital.evekit.model-frontend.db.account.user}"/>
+            <property name="javax.persistence.jdbc.password" value="${enterprises.orbital.evekit.model-frontend.db.account.password}"/>
+            <property name="hibernate.dialect" value="${enterprises.orbital.evekit.model-frontend.db.account.dialect}"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="300"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="10000"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
