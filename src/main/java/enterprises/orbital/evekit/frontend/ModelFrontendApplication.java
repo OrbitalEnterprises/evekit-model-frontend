@@ -9,7 +9,9 @@ import javax.ws.rs.core.Application;
 import enterprises.orbital.base.OrbitalProperties;
 import enterprises.orbital.base.PersistentProperty;
 import enterprises.orbital.db.DBPropertyProvider;
-import enterprises.orbital.evekit.ws.common.AccountBalanceWS;
+import enterprises.orbital.evekit.ws.character.ModelCharacterWS;
+import enterprises.orbital.evekit.ws.common.ModelCommonWS;
+import enterprises.orbital.evekit.ws.corporation.ModelCorporationWS;
 
 public class ModelFrontendApplication extends Application {
   // Property which holds the name of the persistence unit for properties
@@ -28,7 +30,9 @@ public class ModelFrontendApplication extends Application {
   public Set<Class<?>> getClasses() {
     Set<Class<?>> resources = new HashSet<Class<?>>();
     // Model APIresources
-    resources.add(AccountBalanceWS.class);
+    resources.add(ModelCommonWS.class);
+    resources.add(ModelCharacterWS.class);
+    resources.add(ModelCorporationWS.class);
     // Swagger additions
     resources.add(io.swagger.jaxrs.listing.ApiListingResource.class);
     resources.add(io.swagger.jaxrs.listing.SwaggerSerializers.class);
