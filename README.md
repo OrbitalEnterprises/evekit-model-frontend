@@ -110,4 +110,7 @@ For a Javascript client, there is no need to generate client code statically.  I
 ```
 
 For a non-Javascript client, you can use the [Swagger Editor online demo](http://editor.swagger.io/#/).  To generate a client for the public model frontend instance, type in "https://evekit-model.orbital.enterprises/api/swagger.json" under "File->Import URL..", then use the "Generate Client" menu to download an appropriate client.
- 
+
+## Getting Help
+
+The best place to get help is on the [Orbital Forum](https://groups.google.com/forum/#!forum/orbital-enterprises).
