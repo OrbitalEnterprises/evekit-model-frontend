@@ -91,6 +91,64 @@ You can always view the Swagger UI for the public instance of the model frontend
 
 You can view the Swagger UI for another instance using the [Swagger UI online demo](http://petstore.swagger.io).  Navigate to the Swagger UI online demo page, then enter the URL for the Swagger configuration file for the instance you want to view.  Using the configuration properties above, the URL for the Swagger configuration file is always ${enterprises.orbital.evekit.model-frontend.basepath}/${enterprises.orbital.evekit.model-frontend.appname}/api/swagger.json .
 
+### Model API Method Structure and Queries
+
+Parameters for model data REST API methods follow a standard convention.  As an example, consider the Wallet Journal API (a partial image from the Swagger generated documentation):
+
+![EveKit Model API Sample](https://raw.githubusercontent.com/OrbitalEnterprises/orbitalenterprises.github.io/master/images/model_api_sample.PNG "EveKit Model API Sample")
+
+Every API method has at least the following five parameters:
+
+1. The EveKit access key (**accessKey**).  This is a numeric string.
+2. The EveKit access key credential (**accessCred**).  This is an alphanumeric string.
+3. The model lifeline selector (**at**).  This parameter determines the date range of the model data to retrieve (see syntax below).
+4. The continuation ID for paged results (**contid**).  This value sets the minimum "cached data" ID which will be returned by the method (see next section on API method results).
+5. The maximum number of results (**maxresults**) to be returned by the method.
+
+Only **accessKey** and **accessCred** are required.  All remaining parameters are optional with sensible defaults.  Any remaining parameters beyond the five standard parameters are selectors on data fields stored in the model data.  A selector is a JSON string which can be used to filter results according to the following syntax:
+
+* ```{any: <boolean>}``` Wildcard selector.  If true, then this data field is not used to filter returned model data.  Setting this value to false has no effect.
+* ```{like: <string>}``` String match selector.  If the associated data field is string valued, then all returned model data must satisfy the SQL expression 'field LIKE selector'.  Normal SQL 'LIKE' syntax is allowed (e.g. % as wildcard). 
+* ```{values: [<v1>,...,<vn>]}``` Set selector.  The associated data field of each returned model data item must contain one of the listed values.
+* ```{start: <lower>, end: <upper>}``` Range selector.  The associated data field of each returned model data item must satisfy lower <= value <= upper.
+
+In the sample image above, the API method will return all rows which were live at time "9223372036854775806" (Set selector for the "at" parameter).  This value happens to be "Long.MAX_VALUE - 1" and so this selector will choose the latest live data.  All other selectors are wild cards, indicating that all values are allowed.
+
+If "at" were instead "{any: true}", then the complete lifeline for each data item would be returned (up to the **maxresults** limit).  Since "at" expects a long valued argument, the "like" selector will have no effect (it will be interpreted as a wildcard).  If the "at" selector specified "{values: [t1, ..., tn]}" (as in the example above), then only model data which was live at one of times t1 through tn would be returned.  Finally, if the "at" selector specified "{start: t1, end: t2}", then all returned model data is guaranteed to have been live in the time range [t1, t2] \(that is, inclusive).
+
+Selectors applied to other model data fields work in a similar fashion.
+
+### Model API Method Result Example
+
+The EveKit Model Frontend returns results in JSON format, for example:
+
+```json
+[
+  {
+    "cid": 110240,
+    "eveKitVersion": 2,
+    "lifeStart": 1459167655693,
+    "lifeEnd": 9223372036854776000,
+    "accountID": 36538801,
+    "accountKey": 1000,
+    "balance": 348640657.44
+  }
+]
+```
+
+Every result has at least four fields:
+
+* ```cid``` Cached Data ID.  This is a unique EveKit internal ID.  Results are always returned in ascending order by "cid".  This value is also used as the continuation ID when results are paged (every method returns at most 1000 results; paging is required to retrieve additional results).  Finally, "cid" is used to uniquely identify model data for the meta data REST API calls.
+* ```eveKitVersion``` EveKit model data version.  Currently "2" for all data.
+* ```lifeStart``` Time (milliseconds UTC) when this model data was created ("live" datetime).
+* ```lifeEnd`` Time (milliseconds UTC) when this model data was replaced by newer data ("dead" datetime).  A value of "Long.MAX\_VALUE" indicates this data is the latest live data.  **NOTE:** the example above was parsed into javascript which rounds Long.MAX\_VALUE to a slightly higher value.
+
+The segment of the lifeline a model data item occupies is therefore [lifeStart, lifeEnd).  Any remaining fields will be data fields specific to the type of data returned.  The model frontend also returns data in the HTTP Response headers:
+
+* ```Date``` Server time when the result was returned (UTC).
+* ```EveKit-Version``` Version of EveKit server which returned result.
+* ```expires``` The date when the returned data will expire.  Data expiry is set according to EVE Online API server caching timers.
+
 ### Using Swagger to Generate Client Code
 
 The model frontend REST API can be accessed directly by using the paths and arguments described in the API documentation.  However, you can also use the Swagger configuration file to automatically generate appropriate client code.  There are two ways to do this.
