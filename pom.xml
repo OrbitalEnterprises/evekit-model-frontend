@@ -7,7 +7,7 @@
   </parent>
   <groupId>enterprises.orbital.evekit</groupId>
   <artifactId>model-frontend</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
   <packaging>war</packaging>
   <name>EveKit Model API Frontend</name>
   <description>Exposes the EveKit model web services</description>
@@ -15,7 +15,7 @@
   <scm>
   	<url>https://github.com/OrbitalEnterprises/evekit-model-frontend</url>
   	<connection>scm:git:https://github.com/OrbitalEnterprises/evekit-model-frontend.git</connection>
-  	<tag>rel_1_0_0</tag>
+  	<tag>rel_1_0_2</tag>
   	<developerConnection>scm:git:git@github.com:OrbitalEnterprises/evekit-model-frontend.git</developerConnection>
   </scm>
   
@@ -74,7 +74,7 @@
     <dependency>
       <groupId>enterprises.orbital.evekit</groupId>
       <artifactId>model-ws</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -102,10 +102,10 @@
       <version>5.1.38</version>
     </dependency>
     <dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>5.0.6.Final</version>
-		</dependency>    
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>5.0.6.Final</version>
+    </dependency>    
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
