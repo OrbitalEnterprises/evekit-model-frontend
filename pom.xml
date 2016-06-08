@@ -3,11 +3,11 @@
   <parent>
     <groupId>enterprises.orbital</groupId>
     <artifactId>license</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
   </parent>
   <groupId>enterprises.orbital.evekit</groupId>
   <artifactId>model-frontend</artifactId>
-  <version>1.0.2</version>
+  <version>2.0.0</version>
   <packaging>war</packaging>
   <name>EveKit Model API Frontend</name>
   <description>Exposes the EveKit model web services</description>
@@ -15,7 +15,7 @@
   <scm>
   	<url>https://github.com/OrbitalEnterprises/evekit-model-frontend</url>
   	<connection>scm:git:https://github.com/OrbitalEnterprises/evekit-model-frontend.git</connection>
-  	<tag>rel_1_0_2</tag>
+  	<tag>rel_2_0_0</tag>
   	<developerConnection>scm:git:git@github.com:OrbitalEnterprises/evekit-model-frontend.git</developerConnection>
   </scm>
   
@@ -25,6 +25,13 @@
     <enterprises.orbital.evekit.model-frontend.db.properties.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.properties.dialect>
     <enterprises.orbital.evekit.model-frontend.db.account.driver>com.mysql.jdbc.Driver</enterprises.orbital.evekit.model-frontend.db.account.driver>
     <enterprises.orbital.evekit.model-frontend.db.account.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.account.dialect>
+    <evekit.version>2.0.0</evekit.version>
+    <servlet.version>3.1.0</servlet.version>
+    <swagger.version>1.5.7</swagger.version>
+    <jersey.containers.version>2.1</jersey.containers.version>
+    <mysql.connector.version>5.1.38</mysql.connector.version>
+    <hibernate.version>5.0.6.Final</hibernate.version>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
   
   <build>
@@ -74,42 +81,42 @@
     <dependency>
       <groupId>enterprises.orbital.evekit</groupId>
       <artifactId>model-ws</artifactId>
-      <version>1.0.2</version>
+      <version>${evekit.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>${servlet.version}</version>
     </dependency>    
     <dependency>
       <groupId>io.swagger</groupId>
       <artifactId>swagger-annotations</artifactId>
-      <version>1.5.7</version>
+      <version>${swagger.version}</version>
     </dependency> 
     <dependency>
       <groupId>io.swagger</groupId>
       <artifactId>swagger-jersey2-jaxrs</artifactId>
-      <version>1.5.7</version>
+      <version>${swagger.version}</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet</artifactId>
-      <version>2.1</version>
+      <version>${jersey.containers.version}</version>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.38</version>
+      <version>${mysql.connector.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-c3p0</artifactId>
-      <version>5.0.6.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>    
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
+      <version>${log4j.version}</version>
     </dependency>    
   </dependencies>
     
