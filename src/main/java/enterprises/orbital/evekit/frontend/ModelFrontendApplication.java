@@ -10,6 +10,7 @@ import enterprises.orbital.base.OrbitalProperties;
 import enterprises.orbital.base.PersistentProperty;
 import enterprises.orbital.db.DBPropertyProvider;
 import enterprises.orbital.evekit.ws.character.ModelCharacterWS;
+import enterprises.orbital.evekit.ws.common.ModelAccessKeyWS;
 import enterprises.orbital.evekit.ws.common.ModelCommonWS;
 import enterprises.orbital.evekit.ws.common.ModelMetaWS;
 import enterprises.orbital.evekit.ws.corporation.ModelCorporationWS;
@@ -31,6 +32,7 @@ public class ModelFrontendApplication extends Application {
   public Set<Class<?>> getClasses() {
     Set<Class<?>> resources = new HashSet<Class<?>>();
     // Model APIresources
+    resources.add(ModelAccessKeyWS.class);
     resources.add(ModelMetaWS.class);
     resources.add(ModelCommonWS.class);
     resources.add(ModelCharacterWS.class);
