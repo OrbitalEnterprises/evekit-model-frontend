@@ -71,6 +71,7 @@
         <class>enterprises.orbital.evekit.model.common.KillAttacker</class>
         <class>enterprises.orbital.evekit.model.common.KillItem</class>
         <class>enterprises.orbital.evekit.model.common.KillVictim</class>
+        <class>enterprises.orbital.evekit.model.common.Location</class>
         <class>enterprises.orbital.evekit.model.common.MarketOrder</class>
         <class>enterprises.orbital.evekit.model.common.Standing</class>
         <class>enterprises.orbital.evekit.model.common.WalletJournal</class>
