@@ -7,12 +7,43 @@
       <param-name>javax.ws.rs.Application</param-name>
       <param-value>enterprises.orbital.evekit.frontend.ModelFrontendApplication</param-value>
     </init-param>
+    <init-param>
+      <param-name>swagger.scanner.id</param-name>
+      <param-value>model.id</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.config.id</param-name>
+      <param-value>model.id</param-value>
+    </init-param>    
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>jersey</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>jerseyRef</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>enterprises.orbital.evekit.frontend.ModelReferenceApplication</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.scanner.id</param-name>
+      <param-value>ref.id</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.config.id</param-name>
+      <param-value>ref.id</param-value>
+    </init-param>    
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jerseyRef</servlet-name>
+    <url-pattern>/rpi/*</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <servlet-name>Jersey2Config</servlet-name>
     <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
@@ -28,8 +59,43 @@
       <param-name>swagger.api.basepath</param-name>
       <param-value>${enterprises.orbital.evekit.model-frontend.basepath}/${enterprises.orbital.evekit.model-frontend.appname}/api</param-value>
     </init-param>
+    <init-param>
+      <param-name>swagger.scanner.id</param-name>
+      <param-value>model.id</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.config.id</param-name>
+      <param-value>model.id</param-value>
+    </init-param>    
     <load-on-startup>2</load-on-startup>
   </servlet>
+  
+  <servlet>
+    <servlet-name>Jersey2ConfigRef</servlet-name>
+    <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
+    <init-param>
+      <param-name>api.version</param-name>
+      <param-value>2.0.0</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.api.title</param-name>
+      <param-value>EveKit Reference API Server</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.api.basepath</param-name>
+      <param-value>${enterprises.orbital.evekit.model-frontend.basepath}/${enterprises.orbital.evekit.model-frontend.appname}/rpi</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.scanner.id</param-name>
+      <param-value>ref.id</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.config.id</param-name>
+      <param-value>ref.id</param-value>
+    </init-param>    
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  
   <filter>
     <filter-name>ApiOriginFilter</filter-name>
     <filter-class>enterprises.orbital.evekit.frontend.ApiOriginFilter</filter-class>
@@ -37,5 +103,9 @@
   <filter-mapping>
     <filter-name>ApiOriginFilter</filter-name>
     <url-pattern>/api/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>ApiOriginFilter</filter-name>
+    <url-pattern>/rpi/*</url-pattern>
   </filter-mapping>
 </web-app>
