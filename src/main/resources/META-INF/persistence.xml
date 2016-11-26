@@ -133,6 +133,28 @@
         <class>enterprises.orbital.evekit.model.server.ServerStatus</class>
         <class>enterprises.orbital.evekit.model.calls.CallGroup</class>
         <class>enterprises.orbital.evekit.model.calls.Call</class>
+        <class>enterprises.orbital.evekit.model.eve.Alliance</class>
+        <class>enterprises.orbital.evekit.model.eve.AllianceMemberCorporation</class>
+        <class>enterprises.orbital.evekit.model.eve.CharacterKillStat</class>
+        <class>enterprises.orbital.evekit.model.eve.CharacterVictoryPointStat</class>
+        <class>enterprises.orbital.evekit.model.eve.ConquerableStation</class>
+        <class>enterprises.orbital.evekit.model.eve.CorporationKillStat</class>
+        <class>enterprises.orbital.evekit.model.eve.CorporationVictoryPointStat</class>
+        <class>enterprises.orbital.evekit.model.eve.ErrorType</class>
+        <class>enterprises.orbital.evekit.model.eve.FactionKillStat</class>
+        <class>enterprises.orbital.evekit.model.eve.FactionStats</class>
+        <class>enterprises.orbital.evekit.model.eve.FactionVictoryPointStat</class>
+        <class>enterprises.orbital.evekit.model.eve.FactionWar</class>
+        <class>enterprises.orbital.evekit.model.eve.FactionWarSummary</class>
+        <class>enterprises.orbital.evekit.model.eve.RefType</class>
+        <class>enterprises.orbital.evekit.model.eve.RequiredSkill</class>
+        <class>enterprises.orbital.evekit.model.eve.SkillBonus</class>
+        <class>enterprises.orbital.evekit.model.eve.SkillGroup</class>
+        <class>enterprises.orbital.evekit.model.eve.SkillMember</class>
+        <class>enterprises.orbital.evekit.model.map.FactionWarSystem</class>
+        <class>enterprises.orbital.evekit.model.map.MapJump</class>
+        <class>enterprises.orbital.evekit.model.map.MapKill</class>
+        <class>enterprises.orbital.evekit.model.map.Sovereignty</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="${enterprises.orbital.evekit.model-frontend.db.account.driver}"/>
