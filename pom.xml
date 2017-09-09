@@ -7,16 +7,15 @@
   </parent>
   <groupId>enterprises.orbital.evekit</groupId>
   <artifactId>model-frontend</artifactId>
-  <version>3.0.0</version>
+  <version>3.1.0</version>
   <packaging>war</packaging>
   <name>EveKit Model API Frontend</name>
   <description>Exposes the EveKit model web services</description>
   <url>https://github.com/OrbitalEnterprises/evekit-model-frontend</url>
   <scm>
-  	<url>https://github.com/OrbitalEnterprises/evekit-model-frontend</url>
-  	<connection>scm:git:https://github.com/OrbitalEnterprises/evekit-model-frontend.git</connection>
-  	<tag>rel_3_0_0</tag>
-  	<developerConnection>scm:git:git@github.com:OrbitalEnterprises/evekit-model-frontend.git</developerConnection>
+    <url>https://github.com/OrbitalEnterprises/evekit-model-frontend</url>
+    <connection>scm:git:https://github.com/OrbitalEnterprises/evekit-model-frontend.git</connection>
+    <developerConnection>scm:git:git@github.com:OrbitalEnterprises/evekit-model-frontend.git</developerConnection>
   </scm>
   
   <properties>
@@ -25,7 +24,7 @@
     <enterprises.orbital.evekit.model-frontend.db.properties.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.properties.dialect>
     <enterprises.orbital.evekit.model-frontend.db.account.driver>com.mysql.jdbc.Driver</enterprises.orbital.evekit.model-frontend.db.account.driver>
     <enterprises.orbital.evekit.model-frontend.db.account.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.account.dialect>
-    <evekit.version>3.0.0</evekit.version>
+    <evekit.version>3.1.0</evekit.version>
     <servlet.version>3.1.0</servlet.version>
     <swagger.version>1.5.7</swagger.version>
     <jersey.containers.version>2.1</jersey.containers.version>
@@ -119,5 +118,5 @@
       <version>${log4j.version}</version>
     </dependency>    
   </dependencies>
-    
+  
 </project>
