@@ -56,7 +56,6 @@
         <class>enterprises.orbital.evekit.model.CachedData</class>
         <class>enterprises.orbital.evekit.model.ModelTypeMap</class>
         <class>enterprises.orbital.evekit.model.common.AccountBalance</class>
-        <class>enterprises.orbital.evekit.model.common.AccountStatus</class>        
         <class>enterprises.orbital.evekit.model.common.Asset</class>
         <class>enterprises.orbital.evekit.model.common.Blueprint</class>
         <class>enterprises.orbital.evekit.model.common.Bookmark</class>
