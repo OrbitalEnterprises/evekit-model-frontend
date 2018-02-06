@@ -82,16 +82,19 @@
         <class>enterprises.orbital.evekit.model.character.CalendarEventAttendee</class>
         <class>enterprises.orbital.evekit.model.character.Capsuleer</class>
         <class>enterprises.orbital.evekit.model.character.CharacterContactNotification</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterLocation</class>
         <class>enterprises.orbital.evekit.model.character.CharacterMailMessage</class>
         <class>enterprises.orbital.evekit.model.character.CharacterMailMessageBody</class>
         <class>enterprises.orbital.evekit.model.character.CharacterMedal</class>
         <class>enterprises.orbital.evekit.model.character.CharacterNotification</class>
         <class>enterprises.orbital.evekit.model.character.CharacterNotificationBody</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterOnline</class>
         <class>enterprises.orbital.evekit.model.character.CharacterRole</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheet</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheetBalance</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheetClone</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheetJump</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterShip</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSkill</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSkillInTraining</class>
         <class>enterprises.orbital.evekit.model.character.CharacterTitle</class>
