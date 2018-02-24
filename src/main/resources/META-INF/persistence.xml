@@ -91,12 +91,12 @@
         <class>enterprises.orbital.evekit.model.character.CharacterOnline</class>
         <class>enterprises.orbital.evekit.model.character.CharacterRole</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheet</class>
-        <class>enterprises.orbital.evekit.model.character.CharacterSheetBalance</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheetAttributes</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterSheetSkillPoints</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheetClone</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheetJump</class>
         <class>enterprises.orbital.evekit.model.character.CharacterShip</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSkill</class>
-        <class>enterprises.orbital.evekit.model.character.CharacterSkillInTraining</class>
         <class>enterprises.orbital.evekit.model.character.CharacterTitle</class>
         <class>enterprises.orbital.evekit.model.character.ChatChannel</class>
         <class>enterprises.orbital.evekit.model.character.ChatChannelMember</class>
