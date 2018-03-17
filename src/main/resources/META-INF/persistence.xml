@@ -85,8 +85,8 @@
         <class>enterprises.orbital.evekit.model.character.CharacterLocation</class>
         <class>enterprises.orbital.evekit.model.character.CharacterMailMessage</class>
         <class>enterprises.orbital.evekit.model.character.CharacterMedal</class>
+        <class>enterprises.orbital.evekit.model.character.CharacterMedalGraphic</class>
         <class>enterprises.orbital.evekit.model.character.CharacterNotification</class>
-        <class>enterprises.orbital.evekit.model.character.CharacterNotificationBody</class>
         <class>enterprises.orbital.evekit.model.character.CharacterOnline</class>
         <class>enterprises.orbital.evekit.model.character.CharacterRole</class>
         <class>enterprises.orbital.evekit.model.character.CharacterSheet</class>
