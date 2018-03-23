@@ -121,6 +121,7 @@
         <class>enterprises.orbital.evekit.model.corporation.Division</class>
         <class>enterprises.orbital.evekit.model.corporation.Facility</class>
         <class>enterprises.orbital.evekit.model.corporation.Fuel</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberLimit</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberSecurity</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberSecurityLog</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTracking</class>
