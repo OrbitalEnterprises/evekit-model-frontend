@@ -117,19 +117,19 @@
         <class>enterprises.orbital.evekit.model.corporation.CorporationMemberMedal</class>
         <class>enterprises.orbital.evekit.model.corporation.CorporationSheet</class>
         <class>enterprises.orbital.evekit.model.corporation.CorporationTitle</class>
+        <class>enterprises.orbital.evekit.model.corporation.CorporationTitleRole</class>
         <class>enterprises.orbital.evekit.model.corporation.CustomsOffice</class>
         <class>enterprises.orbital.evekit.model.corporation.Division</class>
         <class>enterprises.orbital.evekit.model.corporation.Facility</class>
         <class>enterprises.orbital.evekit.model.corporation.Fuel</class>
+        <class>enterprises.orbital.evekit.model.corporation.Member</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberLimit</class>
-        <class>enterprises.orbital.evekit.model.corporation.MemberSecurity</class>
-        <class>enterprises.orbital.evekit.model.corporation.MemberSecurityLog</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberRole</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberRoleHistory</class>
+        <class>enterprises.orbital.evekit.model.corporation.MemberTitle</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTracking</class>
         <class>enterprises.orbital.evekit.model.corporation.Outpost</class>
         <class>enterprises.orbital.evekit.model.corporation.OutpostServiceDetail</class>
-        <class>enterprises.orbital.evekit.model.corporation.Role</class>
-        <class>enterprises.orbital.evekit.model.corporation.SecurityRole</class>
-        <class>enterprises.orbital.evekit.model.corporation.SecurityTitle</class>
         <class>enterprises.orbital.evekit.model.corporation.Shareholder</class>
         <class>enterprises.orbital.evekit.model.corporation.Starbase</class>
         <class>enterprises.orbital.evekit.model.corporation.StarbaseDetail</class>
