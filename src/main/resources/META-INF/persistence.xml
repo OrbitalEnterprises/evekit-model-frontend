@@ -128,11 +128,8 @@
         <class>enterprises.orbital.evekit.model.corporation.MemberRoleHistory</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTitle</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTracking</class>
-        <class>enterprises.orbital.evekit.model.corporation.Outpost</class>
-        <class>enterprises.orbital.evekit.model.corporation.OutpostServiceDetail</class>
         <class>enterprises.orbital.evekit.model.corporation.Shareholder</class>
         <class>enterprises.orbital.evekit.model.corporation.Starbase</class>
-        <class>enterprises.orbital.evekit.model.corporation.StarbaseDetail</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="${enterprises.orbital.evekit.model-frontend.db.account.driver}"/>
