@@ -99,6 +99,8 @@
         <class>enterprises.orbital.evekit.model.character.CharacterTitle</class>
         <class>enterprises.orbital.evekit.model.character.ChatChannel</class>
         <class>enterprises.orbital.evekit.model.character.ChatChannelMember</class>
+        <class>enterprises.orbital.evekit.model.character.Fitting</class>
+        <class>enterprises.orbital.evekit.model.character.FittingItem</class>
         <class>enterprises.orbital.evekit.model.character.Implant</class>
         <class>enterprises.orbital.evekit.model.character.JumpClone</class>
         <class>enterprises.orbital.evekit.model.character.JumpCloneImplant</class>
