@@ -104,6 +104,7 @@
         <class>enterprises.orbital.evekit.model.character.Implant</class>
         <class>enterprises.orbital.evekit.model.character.JumpClone</class>
         <class>enterprises.orbital.evekit.model.character.JumpCloneImplant</class>
+        <class>enterprises.orbital.evekit.model.character.LoyaltyPoints</class>
         <class>enterprises.orbital.evekit.model.character.MailingList</class>
         <class>enterprises.orbital.evekit.model.character.MailLabel</class>
         <class>enterprises.orbital.evekit.model.character.PlanetaryColony</class>
