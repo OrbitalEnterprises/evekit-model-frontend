@@ -107,6 +107,7 @@
         <class>enterprises.orbital.evekit.model.character.LoyaltyPoints</class>
         <class>enterprises.orbital.evekit.model.character.MailingList</class>
         <class>enterprises.orbital.evekit.model.character.MailLabel</class>
+        <class>enterprises.orbital.evekit.model.character.MiningLedger</class>
         <class>enterprises.orbital.evekit.model.character.PlanetaryColony</class>
         <class>enterprises.orbital.evekit.model.character.PlanetaryLink</class>
         <class>enterprises.orbital.evekit.model.character.PlanetaryPin</class>
@@ -131,6 +132,9 @@
         <class>enterprises.orbital.evekit.model.corporation.MemberRoleHistory</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTitle</class>
         <class>enterprises.orbital.evekit.model.corporation.MemberTracking</class>
+        <class>enterprises.orbital.evekit.model.corporation.MiningExtraction</class>
+        <class>enterprises.orbital.evekit.model.corporation.MiningObserver</class>
+        <class>enterprises.orbital.evekit.model.corporation.MiningObservation</class>
         <class>enterprises.orbital.evekit.model.corporation.Shareholder</class>
         <class>enterprises.orbital.evekit.model.corporation.Starbase</class>
 
