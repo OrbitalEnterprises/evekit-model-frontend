@@ -7,7 +7,7 @@
   </parent>
   <groupId>enterprises.orbital.evekit</groupId>
   <artifactId>model-frontend</artifactId>
-  <version>4.2.1</version>
+  <version>4.3.0</version>
   <packaging>war</packaging>
   <name>EveKit Model API Frontend</name>
   <description>Exposes the EveKit model web services</description>
@@ -24,7 +24,7 @@
     <enterprises.orbital.evekit.model-frontend.db.properties.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.properties.dialect>
     <enterprises.orbital.evekit.model-frontend.db.account.driver>com.mysql.jdbc.Driver</enterprises.orbital.evekit.model-frontend.db.account.driver>
     <enterprises.orbital.evekit.model-frontend.db.account.dialect>org.hibernate.dialect.MySQLDialect</enterprises.orbital.evekit.model-frontend.db.account.dialect>
-    <evekit.version>4.2.1</evekit.version>
+    <evekit.version>4.3.0</evekit.version>
     <servlet.version>3.1.0</servlet.version>
     <swagger.version>1.5.7</swagger.version>
     <jersey.containers.version>2.1</jersey.containers.version>
