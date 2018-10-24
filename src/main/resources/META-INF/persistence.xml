@@ -16,9 +16,6 @@
         <class>enterprises.orbital.evekit.account.EveKitUserAuthSource</class>
         <class>enterprises.orbital.evekit.account.SynchronizedAccountAccessKey</class>
         <class>enterprises.orbital.evekit.account.SynchronizedEveAccount</class>
-        <class>enterprises.orbital.evekit.model.CapsuleerSyncTracker</class>
-        <class>enterprises.orbital.evekit.model.CorporationSyncTracker</class>
-        <class>enterprises.orbital.evekit.model.SyncTracker</class>
         <class>enterprises.orbital.evekit.model.ESIEndpointSyncTracker</class>
         <class>enterprises.orbital.evekit.model.ESIRefEndpointSyncTracker</class>
 
@@ -51,9 +48,6 @@
         <class>enterprises.orbital.evekit.account.EveKitUserAuthSource</class>
         <class>enterprises.orbital.evekit.account.SynchronizedAccountAccessKey</class>
         <class>enterprises.orbital.evekit.account.SynchronizedEveAccount</class>
-        <class>enterprises.orbital.evekit.model.CapsuleerSyncTracker</class>
-        <class>enterprises.orbital.evekit.model.CorporationSyncTracker</class>
-        <class>enterprises.orbital.evekit.model.SyncTracker</class>
         <class>enterprises.orbital.evekit.model.ESIEndpointSyncTracker</class>
         <class>enterprises.orbital.evekit.model.ESIRefEndpointSyncTracker</class>
 
@@ -80,7 +74,6 @@
         <class>enterprises.orbital.evekit.model.common.WalletJournal</class>
         <class>enterprises.orbital.evekit.model.common.WalletTransaction</class>
         <class>enterprises.orbital.evekit.model.character.CalendarEventAttendee</class>
-        <class>enterprises.orbital.evekit.model.character.Capsuleer</class>
         <class>enterprises.orbital.evekit.model.character.CharacterContactNotification</class>
         <class>enterprises.orbital.evekit.model.character.CharacterFleet</class>
         <class>enterprises.orbital.evekit.model.character.CharacterLocation</class>
@@ -122,7 +115,6 @@
         <class>enterprises.orbital.evekit.model.character.SkillInQueue</class>
         <class>enterprises.orbital.evekit.model.character.UpcomingCalendarEvent</class>
         <class>enterprises.orbital.evekit.model.corporation.ContainerLog</class>
-        <class>enterprises.orbital.evekit.model.corporation.Corporation</class>
         <class>enterprises.orbital.evekit.model.corporation.CorporationMedal</class>
         <class>enterprises.orbital.evekit.model.corporation.CorporationMemberMedal</class>
         <class>enterprises.orbital.evekit.model.corporation.CorporationSheet</class>
