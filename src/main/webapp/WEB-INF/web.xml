@@ -14,7 +14,7 @@
     <init-param>
       <param-name>swagger.config.id</param-name>
       <param-value>model.id</param-value>
-    </init-param>    
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

@@ -4,14 +4,13 @@ import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import javax.ws.rs.core.Application;
 
 import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.joda.JodaModule;
 import enterprises.orbital.base.OrbitalProperties;
 import enterprises.orbital.base.PersistentProperty;
 import enterprises.orbital.db.DBPropertyProvider;
@@ -20,15 +19,18 @@ import enterprises.orbital.evekit.ws.common.ModelAccessKeyWS;
 import enterprises.orbital.evekit.ws.common.ModelCommonWS;
 import enterprises.orbital.evekit.ws.common.ModelMetaWS;
 import enterprises.orbital.evekit.ws.corporation.ModelCorporationWS;
+import enterprises.orbital.evekit.ws.evekitf.EveKitFCharacterWS;
 import io.swagger.converter.ModelConverter;
 import io.swagger.converter.ModelConverterContext;
 import io.swagger.converter.ModelConverters;
 import io.swagger.jackson.AbstractModelConverter;
 import io.swagger.models.Model;
 import io.swagger.models.ModelImpl;
+import io.swagger.models.properties.DateTimeProperty;
 import io.swagger.models.properties.DoubleProperty;
 import io.swagger.models.properties.Property;
 import io.swagger.util.Json;
+import org.joda.time.DateTime;
 
 public class ModelFrontendApplication extends Application {
   // Property which holds the name of the persistence unit for properties
@@ -89,10 +91,12 @@ public class ModelFrontendApplication extends Application {
     resources.add(ModelCommonWS.class);
     resources.add(ModelCharacterWS.class);
     resources.add(ModelCorporationWS.class);
+    // EveKitF
+    resources.add(EveKitFCharacterWS.class);
     // Swagger additions
     resources.add(io.swagger.jaxrs.listing.ApiListingResource.class);
     resources.add(io.swagger.jaxrs.listing.SwaggerSerializers.class);
-    // Return resource set
+
     return resources;
   }
 
